@@ -1,0 +1,13 @@
+{
+  "name": "tuvalum-mock-api",
+  "version": "1.0.0",
+  "description": "Tuvalum mock product list api",
+  "main": "index.js",
+  "scripts": {
+    "start": "json-server --watch db.json"
+  },
+  "author": "",
+  "devDependencies": {
+    "json-server": "^0.15.1"
+  }
+}
