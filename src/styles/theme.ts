@@ -30,8 +30,8 @@ const theme = {
     white: "#ffffff",
   },
   device: {
-    mobile: "(max-width: 767px)",
-    desktop: "(min-width: 767px)",
+    mobile: "(max-width: 640px)",
+    desktop: "(min-width: 640px)",
   },
   fonts: {
     bold: 700,
@@ -46,7 +46,6 @@ const theme = {
     xl: "2rem",
   },
   radius: {
-    xxs: "2px",
     xs: "4px",
     sm: "8px",
     md: "10px",
@@ -54,8 +53,6 @@ const theme = {
     xlg: "20px",
   },
   spacing: {
-    navBar: "3.5rem",
-    paddingDesktopContent: "0.5rem 1rem",
     s01: `calc(0.25 * ${BASE_SPACING})`,
     s02: `calc(0.5 * ${BASE_SPACING})`,
     s03: `calc(0.75 * ${BASE_SPACING})`,
