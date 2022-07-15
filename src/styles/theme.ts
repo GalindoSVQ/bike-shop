@@ -5,8 +5,7 @@ const BASE_SPACING = "1rem";
 const theme = {
   colors: {
     apricot: "#FDC3D1",
-    background: "#2D313D",
-    backgroundCard: "#40444f",
+    background: "#EBEECB",
     black: "#000000",
     blue100: "#072046",
     blue200: "#004481",
@@ -22,9 +21,9 @@ const theme = {
     light300: "#f4f4f4",
     lightGray100: "#7d7d7d",
     lightGray50: "#a7a7a7",
-    primary: "#F1DDE9",
+    primary: "#31572C",
     red: "#ed6b6a",
-    secondary: "#804156",
+    secondary: "#31572C",
     success: "#d9efe0",
     warning: "#ffefcf",
     white: "#ffffff",
