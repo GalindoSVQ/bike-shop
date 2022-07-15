@@ -1,12 +1,12 @@
 import "styled-components";
 
 const BASE_SPACING = "1rem";
+export const BREAKPOINT_MOBILE = "640px";
 
 const theme = {
   colors: {
     apricot: "#FDC3D1",
-    background: "#2D313D",
-    backgroundCard: "#40444f",
+    background: "#EBEECB",
     black: "#000000",
     blue100: "#072046",
     blue200: "#004481",
@@ -22,16 +22,16 @@ const theme = {
     light300: "#f4f4f4",
     lightGray100: "#7d7d7d",
     lightGray50: "#a7a7a7",
-    primary: "#F1DDE9",
+    primary: "#31572C",
     red: "#ed6b6a",
-    secondary: "#804156",
+    secondary: "#31572C",
     success: "#d9efe0",
     warning: "#ffefcf",
     white: "#ffffff",
   },
   device: {
-    mobile: "(max-width: 767px)",
-    desktop: "(min-width: 767px)",
+    mobile: `(max-width: ${BREAKPOINT_MOBILE})`,
+    desktop: `(min-width: ${BREAKPOINT_MOBILE})`,
   },
   fonts: {
     bold: 700,
@@ -46,7 +46,6 @@ const theme = {
     xl: "2rem",
   },
   radius: {
-    xxs: "2px",
     xs: "4px",
     sm: "8px",
     md: "10px",
@@ -54,8 +53,6 @@ const theme = {
     xlg: "20px",
   },
   spacing: {
-    navBar: "3.5rem",
-    paddingDesktopContent: "0.5rem 1rem",
     s01: `calc(0.25 * ${BASE_SPACING})`,
     s02: `calc(0.5 * ${BASE_SPACING})`,
     s03: `calc(0.75 * ${BASE_SPACING})`,
