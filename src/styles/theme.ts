@@ -1,6 +1,7 @@
 import "styled-components";
 
 const BASE_SPACING = "1rem";
+export const BREAKPOINT_MOBILE = "640px";
 
 const theme = {
   colors: {
@@ -29,8 +30,8 @@ const theme = {
     white: "#ffffff",
   },
   device: {
-    mobile: "(max-width: 640px)",
-    desktop: "(min-width: 640px)",
+    mobile: `(max-width: ${BREAKPOINT_MOBILE})`,
+    desktop: `(min-width: ${BREAKPOINT_MOBILE})`,
   },
   fonts: {
     bold: 700,
