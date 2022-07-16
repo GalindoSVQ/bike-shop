@@ -2,9 +2,12 @@ import { PropsWithChildren } from "react";
 import { ThemeProvider } from "styled-components";
 import { Layout } from "components/Layout";
 import theme from "styles/theme";
+import { ShoppingCartProvider } from "context/ShoppingCart";
 
-export const Providers = ({ children }: PropsWithChildren<{}>) => (
+export const Providers = ({ children }: PropsWithChildren) => (
   <ThemeProvider theme={theme}>
-    <Layout>{children}</Layout>
+    <ShoppingCartProvider>
+      <Layout>{children}</Layout>
+    </ShoppingCartProvider>
   </ThemeProvider>
 );
