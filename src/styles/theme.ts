@@ -1,7 +1,7 @@
 import "styled-components";
 
 const BASE_SPACING = "1rem";
-export const BREAKPOINT_MOBILE = "640px";
+const BREAKPOINT_MOBILE = "640px";
 
 const theme = {
   colors: {

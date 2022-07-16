@@ -1,14 +1,15 @@
+import Bike from "models/bike";
 import { createContext, PropsWithChildren, useContext, useState } from "react";
 
 type ShoppingCartContext = {
-  getItemQuantity: (itemId: string) => number;
-  increaseCart: (itemId: string) => void;
-  decreaseCart: (itemId: string) => void;
-  removeFromCart: (itemId: string) => void;
+  getItemQuantity: (itemId: Bike["id"]) => number;
+  increaseCart: (itemId: Bike["id"]) => void;
+  decreaseCart: (itemId: Bike["id"]) => void;
+  removeFromCart: (itemId: Bike["id"]) => void;
 };
 
 type CartItem = {
-  id: string;
+  id: Bike["id"];
   quantity: number;
 };
 
