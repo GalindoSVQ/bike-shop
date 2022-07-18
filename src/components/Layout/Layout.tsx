@@ -12,10 +12,10 @@ export function Layout({ children }: PropsWithChildren<{}>) {
     <Wrapper>
       <Content>
         <Header />
-        <ErrorBoundary>
-          <Main>{children}</Main>
-          <Footer />
-        </ErrorBoundary>
+        <Main>
+          <ErrorBoundary>{children}</ErrorBoundary>
+        </Main>
+        <Footer />
       </Content>
       <Sidebar />
       <ShoppingCart />

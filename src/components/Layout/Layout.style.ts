@@ -7,7 +7,7 @@ const Content = styled.div`
   width: 100%;
 `;
 
-const Main = styled.div`
+const Main = styled.main`
   flex: 1;
   max-height: 100%;
 `;
