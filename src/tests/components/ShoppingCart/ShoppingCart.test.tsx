@@ -1,4 +1,4 @@
-import { ShoppingCart } from "../ShoppingCart";
+import { ShoppingCart } from "components/ShoppingCart";
 import { expect, it, describe } from "vitest";
 import { render, screen } from "utilities/test-utils";
 

@@ -1,4 +1,4 @@
-import { Header } from "../Header";
+import { Header } from "components/Header";
 import { expect, it, describe } from "vitest";
 import { render, screen } from "utilities/test-utils";
 

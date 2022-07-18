@@ -1,4 +1,4 @@
-import { Sidebar } from "../Sidebar";
+import { Sidebar } from "components/Sidebar";
 import { expect, it, describe } from "vitest";
 import { render, screen } from "utilities/test-utils";
 
