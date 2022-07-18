@@ -1,14 +1,13 @@
 import styled, { css, keyframes } from "styled-components";
-import { BREAKPOINT_MOBILE } from "styles/theme";
 
 const shoppingCartAnimation = keyframes`
 0% {
+    left: 100%;
     opacity: 0;
-    transform: translateX(${BREAKPOINT_MOBILE});
   } 
 100% {
+    left: 0;
     opacity: 1;
-    transform: translateX(0px);
   }
 `;
 
@@ -45,8 +44,7 @@ const Container = styled.div<{ $show: boolean }>`
   ${({ $show }) =>
     $show
       ? css`
-          animation-name: ${shoppingCartAnimation};
-          animation-duration: 0.7s;
+          animation: ${shoppingCartAnimation} 0.5s ease-in-out 0s 1 normal;
         `
       : css`
           display: none;
