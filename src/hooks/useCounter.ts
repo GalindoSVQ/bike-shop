@@ -2,17 +2,18 @@ import { Dispatch, SetStateAction, useState } from "react";
 
 interface ReturnType {
   count: number;
-  increment: () => void;
-  decrement: () => void;
+  increment: (value?: number) => void;
+  decrement: (value?: number) => void;
   reset: () => void;
-  setCount: Dispatch<SetStateAction<number>>;
 }
 
 function useCounter(initialValue?: number): ReturnType {
   const [count, setCount] = useState(initialValue || 0);
 
-  const increment = () => setCount((x) => x + 1);
-  const decrement = () => setCount((x) => x - 1);
+  const increment = (value = 1) =>
+    setCount((currentValue) => currentValue + value);
+  const decrement = (value = 1) =>
+    setCount((currentValue) => currentValue - value);
   const reset = () => setCount(initialValue || 0);
 
   return {
@@ -20,7 +21,6 @@ function useCounter(initialValue?: number): ReturnType {
     increment,
     decrement,
     reset,
-    setCount,
   };
 }
 
