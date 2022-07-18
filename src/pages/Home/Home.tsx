@@ -1,7 +1,8 @@
-import { useCounter } from "hooks/useCounter";
-import { useFetch } from "hooks/useFetch";
+import { Pagination } from "components/Pagination";
 import Bike from "models/bike";
 import { API } from "utilities/constants";
+import { useCounter, useFetch } from "hooks";
+import { Container } from "./Home.style";
 
 export function Home() {
   const { count: page, increment, decrement } = useCounter(1);
@@ -10,12 +11,20 @@ export function Home() {
   );
 
   return (
-    <div>
+    <Container>
       {loading ? (
         <p>Loading... </p>
       ) : (
         data?.map((bike) => <p key={bike.id}>{bike.title}</p>)
       )}
-    </div>
+      {!loading && (
+        <Pagination
+          currentPage={page}
+          totalPages={40}
+          handleIncrement={increment}
+          handleDecrement={decrement}
+        />
+      )}
+    </Container>
   );
 }
