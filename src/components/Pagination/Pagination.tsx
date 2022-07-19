@@ -3,24 +3,34 @@ import { Container } from "./Pagination.style";
 type Props = {
   currentPage: number;
   totalPages: number;
-  handleIncrement: (value?: number) => void;
-  handleDecrement: (value?: number) => void;
+  increment: (value?: number) => void;
+  decrement: (value?: number) => void;
 };
 
 export function Pagination({
   currentPage,
   totalPages,
-  handleIncrement,
-  handleDecrement,
+  increment,
+  decrement,
 }: Props) {
+  const paginationHandler = (type: "increment" | "decrement") => {
+    type === "increment" ? increment() : decrement();
+    window.scrollTo({
+      top: 0,
+    });
+  };
+
   return (
     <Container>
-      <button onClick={() => handleDecrement()} disabled={currentPage === 1}>
+      <button
+        onClick={() => paginationHandler("decrement")}
+        disabled={currentPage === 1}
+      >
         &#60;
       </button>
       {currentPage} of {totalPages}
       <button
-        onClick={() => handleIncrement()}
+        onClick={() => paginationHandler("increment")}
         disabled={currentPage === totalPages}
       >
         &#62;
