@@ -11,8 +11,7 @@ function BikeCard({ bike }: Props) {
   const [modalOpen, setModalOpen] = useState(false);
   const [selectedBike, setSelectedBike] = useState<Bike | null>(null);
   const imgRef = useRef<HTMLImageElement>(null);
-  const formatPrice = (price: string) => +price.replace(".", "");
-  const priceFormatted = formatCurrency(formatPrice(bike.price));
+  const priceFormatted = formatCurrency(bike.price);
 
   const onClickPicHandler = useCallback((bike: Bike | null) => {
     const isPlaceholder = /placeholder_bike.svg/i.exec(imgRef.current?.src!);
@@ -43,7 +42,7 @@ function BikeCard({ bike }: Props) {
       </Container>
       {modalOpen && (
         <Modal onClick={() => onClickPicHandler(null)}>
-          <img src={selectedBike?.image} />
+          <img src={selectedBike?.image} alt="Bike Pic" />
         </Modal>
       )}
     </>
