@@ -12,7 +12,7 @@ const shoppingCartAnimation = keyframes`
 `;
 
 const Button = styled.button`
-  position: absolute;
+  position: fixed;
   box-shadow: 0px 0px 15px 2px rgba(151, 151, 151, 0.73);
   border: none;
   border-radius: 50%;
