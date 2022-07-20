@@ -1,4 +1,4 @@
-import { useShoppingCart } from "context/ShoppingCart";
+import { useShoppingCart } from "context";
 import { CardCartItem } from "components/CardCartItem";
 import { Container, Items } from "./ShoppingCart.style";
 

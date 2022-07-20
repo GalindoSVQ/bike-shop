@@ -1,5 +1,5 @@
 import { useCallback, useRef, useState } from "react";
-import { useShoppingCart } from "context/ShoppingCart";
+import { useShoppingCart } from "context";
 import { formatCurrency, lockScrollbar, onErrorImgHandler } from "utilities";
 import Bike from "models/bike";
 import { AddButton, Container, Data, Modal } from "./BikeCard.style";

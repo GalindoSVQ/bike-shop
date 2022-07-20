@@ -1,4 +1,4 @@
-import { useShoppingCart } from "context/ShoppingCart";
+import { useShoppingCart } from "context";
 import Bike from "models/bike";
 import { formatCurrency, onErrorImgHandler } from "utilities";
 import { Container, Data } from "./CardCartItem.style";

@@ -1,5 +1,5 @@
 import { useState } from "react";
-import { useShoppingCart } from "context/ShoppingCart";
+import { useShoppingCart } from "context";
 import { ShoppingCart } from "components/ShoppingCart";
 import ShoppingCartSVG from "../../assets/icons/shopping-cart.svg";
 import XIcon from "../../assets/icons/x.svg";
