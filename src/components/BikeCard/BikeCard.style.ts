@@ -10,6 +10,12 @@ const AddButton = styled.button`
   font-weight: ${({ theme }) => theme.fonts.light};
   border: none;
   border-radius: ${({ theme }) => theme.radius.sm};
+
+  &:hover {
+    transform: scale(1.02);
+    box-shadow: 0 2px 3px 2px rgba(0, 0, 0, 0.08),
+      0 -2px 4px 0 rgba(0, 0, 0, 0.2);
+  }
 `;
 
 const Container = styled.article`
@@ -29,12 +35,6 @@ const Container = styled.article`
     max-height: 8rem;
     width: 100%;
     border-radius: 0.25rem 0.25rem 0 0;
-  }
-
-  &:hover {
-    transform: scale(1.02);
-    box-shadow: 0 2px 3px 2px rgba(0, 0, 0, 0.08),
-      0 -2px 4px 0 rgba(0, 0, 0, 0.2);
   }
 
   & h1 {

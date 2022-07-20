@@ -3,6 +3,12 @@ const CURRENCY_FORMATTER = new Intl.NumberFormat("es-ES", {
   style: "currency",
 });
 
-export function formatCurrency(number: number) {
-  return CURRENCY_FORMATTER.format(number);
+export const removePoints = (value: string) => value.replace(/\./g, "");
+export const replaceCommas = (value: string) => value.replace(/,/g, ".");
+
+export function formatCurrency(value: string) {
+  let price = removePoints(value);
+  price = replaceCommas(price);
+
+  return CURRENCY_FORMATTER.format(+price);
 }

@@ -1,29 +1,24 @@
-import { useState } from "react";
-import ShoppingCartSVG from "../../assets/icons/shopping-cart.svg";
-import XIcon from "../../assets/icons/x.svg";
-import { Button, Container } from "./ShoppingCart.style";
+import { useShoppingCart } from "context";
+import { CardCartItem } from "components/CardCartItem";
+import { Container, Items } from "./ShoppingCart.style";
 
-function ShoppingCart() {
-  const [showShoppingCart, setShowShoppingCart] = useState(false);
+type Props = {
+  showShoppingCart: boolean;
+};
 
-  const showShoppingCartHandler = () => {
-    setShowShoppingCart((current) => !current);
-  };
-
-  const CartButton = () => (
-    <Button>
-      <img
-        src={showShoppingCart ? XIcon : ShoppingCartSVG}
-        alt={`${showShoppingCart ? "Close" : "Open"} shopping cart`}
-        onClick={showShoppingCartHandler}
-      />
-    </Button>
-  );
-
+function ShoppingCart({ showShoppingCart }: Props) {
+  const { cartItems, total } = useShoppingCart();
   return (
     <>
-      <CartButton />
-      <Container $show={showShoppingCart}>Shopping Cart</Container>
+      <Container $show={showShoppingCart}>
+        <h1>Cart</h1>
+        <Items>
+          {cartItems.map((item) => (
+            <CardCartItem key={item.id} bike={item} />
+          ))}
+        </Items>
+        <span>Total: {total} </span>
+      </Container>
     </>
   );
 }

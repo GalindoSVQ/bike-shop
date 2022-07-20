@@ -22,10 +22,10 @@ export function Home() {
         {loading ? (
           <CardPlaceholder items={API.LIMIT} />
         ) : (
-          bikes?.map((bike) => <BikeCard key={bike.id} bike={bike} />)
+          bikes?.map((bike) => <BikeCard key={bike.id} {...bike} />)
         )}
       </Wrapper>
-      {!loading && (
+      {!loading && !!bikes?.length && (
         <Pagination
           currentPage={page}
           totalPages={17}
