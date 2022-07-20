@@ -3,8 +3,8 @@ const CURRENCY_FORMATTER = new Intl.NumberFormat("es-ES", {
   style: "currency",
 });
 
-const removePoints = (value: string) => value.replace(/\./g, "");
-const replaceCommas = (value: string) => value.replace(/,/g, ".");
+export const removePoints = (value: string) => value.replace(/\./g, "");
+export const replaceCommas = (value: string) => value.replace(/,/g, ".");
 
 export function formatCurrency(value: string) {
   let price = removePoints(value);
