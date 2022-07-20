@@ -1,6 +1,7 @@
 # Bike-Shop
 
-Bike shop simulation with shopping cart,
+Bike shop simulation with shopping cart
+
 ![Demo](https://github.com/GalindoSVQ/bike-shop/blob/main/src/assets/images/demo.gif)
 
 # Getting Started
