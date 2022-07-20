@@ -1,10 +1,7 @@
-export const API = {
+const API = {
   BASE_URL: "http://localhost:3000/",
   PRODUCTS: "products",
-  LIMIT: 10,
+  LIMIT: 12,
 } as const;
 
-type APIKeys = keyof typeof API;
-type APIValues = typeof API[APIKeys];
-
-export type { APIKeys, APIValues };
+export { API };
