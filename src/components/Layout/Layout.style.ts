@@ -9,16 +9,22 @@ const Content = styled.div`
 
 const Main = styled.main`
   flex: 1;
-  max-height: 100%;
 `;
 
 const Wrapper = styled.div`
-  background-color: ${({ theme }) => theme.colors.background};
-  color: ${({ theme }) => theme.colors.primary};
   display: flex;
   flex-flow: row nowrap;
+  color: ${({ theme }) => theme.colors.primary};
+  background-color: ${({ theme }) => theme.colors.background};
   min-height: 100vh;
   width: 100%;
+
+  @media ${({ theme }) => theme.device.desktop} {
+    & > div:last-child {
+      margin-left: auto;
+      width: 25%;
+    }
+  }
 `;
 
 export { Content, Main, Wrapper };
