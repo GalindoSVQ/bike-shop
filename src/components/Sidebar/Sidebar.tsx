@@ -21,7 +21,7 @@ export function Sidebar() {
           onClick={showShoppingCartHandler}
         />
       </Button>
-      {cartQuantity && <CartQuantity>{cartQuantity}</CartQuantity>}
+      {!!cartQuantity && <CartQuantity>{cartQuantity}</CartQuantity>}
     </>
   );
 

@@ -8,6 +8,7 @@ type Props = {
 
 function ShoppingCart({ showShoppingCart }: Props) {
   const { cartItems, total } = useShoppingCart();
+
   return (
     <>
       <Container $show={showShoppingCart}>
