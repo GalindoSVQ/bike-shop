@@ -1,5 +1,6 @@
 import Bike from "models/bike";
 import { createContext, PropsWithChildren, useContext, useState } from "react";
+import { useLocalStore } from "hooks";
 import { formatCurrency, removePoints } from "utilities";
 
 type ShoppingCartContext = {
@@ -17,20 +18,18 @@ export function useShoppingCart() {
 }
 
 export function ShoppingCartProvider({ children }: PropsWithChildren) {
-  const [cartItems, setCartItems] = useState<Bike[]>([]);
+  const [cartItems, setCartItems] = useLocalStore<Bike[]>("cart", []);
 
   function addToCart(newItem: Bike) {
     if (cartItems.find((item) => item.id === newItem.id)) {
       return;
     }
 
-    setCartItems((cartItems) => [...cartItems, newItem]);
+    setCartItems([...cartItems, newItem]);
   }
 
   function removeFromCart(itemId: Bike["id"]) {
-    setCartItems((currentItems) =>
-      currentItems.filter((item) => item.id !== itemId)
-    );
+    setCartItems(cartItems.filter((item) => item.id !== itemId));
   }
 
   function getTotal() {
