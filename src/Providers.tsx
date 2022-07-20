@@ -1,8 +1,8 @@
 import { PropsWithChildren } from "react";
 import { ThemeProvider } from "styled-components";
+import { ShoppingCartProvider } from "context";
 import { Layout } from "components/Layout";
 import theme from "styles/theme";
-import { ShoppingCartProvider } from "context/ShoppingCart";
 
 export const Providers = ({ children }: PropsWithChildren) => (
   <ThemeProvider theme={theme}>

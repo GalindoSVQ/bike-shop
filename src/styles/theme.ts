@@ -17,6 +17,7 @@ const theme = {
     dark50: "#050505",
     error: "#f4c3ca",
     green: "#48ae64",
+    green100: "#a6cebd",
     light100: "#bdbdbd",
     light200: "#d3d3d3",
     light300: "#f4f4f4",
@@ -24,7 +25,7 @@ const theme = {
     lightGray50: "#a7a7a7",
     primary: "#31572C",
     red: "#ed6b6a",
-    secondary: "#31572C",
+    secondary: "#5C8457",
     success: "#d9efe0",
     warning: "#ffefcf",
     white: "#ffffff",
@@ -63,9 +64,15 @@ const theme = {
     s08: `calc(2 * ${BASE_SPACING})`,
   },
   zIndex: {
+    modal: 4,
     top: 3,
     middle: 2,
     zero: 0,
+  },
+  opacity: {
+    faint: 0.7,
+    middle: 0.4,
+    loud: 0.1,
   },
 } as const;
 

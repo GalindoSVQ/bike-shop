@@ -11,48 +11,54 @@ const shoppingCartAnimation = keyframes`
   }
 `;
 
-const Button = styled.button`
-  position: absolute;
-  box-shadow: 0px 0px 15px 2px rgba(151, 151, 151, 0.73);
-  border: none;
-  border-radius: 50%;
-  top: 2%;
-  right: 5%;
-  height: 4rem;
-  width: 4rem;
-  z-index: ${({ theme }) => theme.zIndex.top};
-
-  & img {
-    height: 2.5rem;
-    width: 2.5rem;
-  }
-
-  @media ${({ theme }) => theme.device.desktop} {
-    display: none;
-  }
-`;
-
 const Container = styled.div<{ $show: boolean }>`
-  position: absolute;
-  min-height: 100vh;
-  min-width: 100vw;
-  background-color: ${({ theme }) => theme.colors.background};
-  top: 0;
-  left: 0;
-  z-index: ${({ theme }) => theme.zIndex.middle};
+  display: flex;
+  flex-flow: column nowrap;
+  padding: 1rem 0.5rem 7rem;
+  gap: 2rem;
 
-  ${({ $show }) =>
-    $show
-      ? css`
-          animation: ${shoppingCartAnimation} 0.5s ease-in-out 0s 1 normal;
-        `
-      : css`
-          display: none;
-        `}
+  & > h1 {
+    font-size: ${({ theme }) => theme.fontSize.xl};
+    font-weight: ${({ theme }) => theme.fonts.bold};
+  }
 
-  @media ${({ theme }) => theme.device.desktop} {
-    display: none;
+  & > span {
+    margin-top: 2rem;
+    font-size: ${({ theme }) => theme.fontSize.medium};
+    font-weight: ${({ theme }) => theme.fonts.medium};
+    align-self: center;
+  }
+
+  @media ${({ theme }) => theme.device.mobile} {
+    position: fixed;
+    top: 0;
+    bottom: 0;
+    left: 0;
+    right: 0;
+    background-color: ${({ theme }) => theme.colors.background};
+    z-index: ${({ theme }) => theme.zIndex.middle};
+    border: 1px solid red;
+    overflow-y: scroll;
+
+    ${({ $show }) =>
+      $show
+        ? css`
+            animation: ${shoppingCartAnimation} 0.5s ease-in-out 0s 1 normal;
+          `
+        : css`
+            display: none;
+          `}
   }
 `;
 
-export { Button, Container };
+const Items = styled.div`
+  display: flex;
+  flex-flow: column nowrap;
+  gap: 1rem;
+
+  @media ${({ theme }) => theme.device.mobile} {
+    margin-top: 2rem;
+  }
+`;
+
+export { Container, Items };
