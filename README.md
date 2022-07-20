@@ -1,7 +1,7 @@
 # Bike-Shop
 
 Bike shop simulation with shopping cart,
-![Demo](https://raw.githubusercontent.com/GalindoSVQ/bike-shop/3f6e325b6d6c5d85159609c3a041a676a71423f0/src/assets/images/demo.gif)
+![Demo](https://github.com/GalindoSVQ/bike-shop/blob/main/src/assets/images/demo.gif)
 
 # Getting Started
 
@@ -35,6 +35,6 @@ And run the API with:
 
 ### `yarn coverage`
 
-Dependencies used
+## Dependencies used
 
 - [Styled-Components](https://github.com/styled-components/styled-components) ES6 and CSS to style the app
